@@ -24,31 +24,37 @@ export default function About() {
 
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
-      description: "Leading frontend development for enterprise applications using React and Next.js."
+      title: "Full Stack Developer (E-commerce Platform)",
+      company: "Personal Project",
+      period: "2024",
+      description: "Built a full-featured e-commerce platform using the MERN stack, implemented real-time admin support and role-based authentication with JWT."
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations",
-      period: "2020 - 2022",
-      description: "Developed full-stack applications with React, Node.js, and MongoDB."
+      title: "Android Developer (Garbage Collection App)",
+      company: "Academic Project",
+      period: "2023",
+      description: "Developed a real-time Android garbage collection tracking app using Java and Firebase, improving performance and UX."
     },
     {
-      title: "Zoho CRM Consultant",
-      company: "Business Solutions",
-      period: "2019 - 2020",
-      description: "Customized Zoho CRM solutions for various business processes and workflows."
+      title: "MERN Stack Developer",
+      company: "Self-Initiated Projects",
+      period: "2022 - 2024",
+      description: "Created and deployed multiple full stack applications, practiced Agile methodologies, API integrations, and version control with Git/GitHub."
     }
   ];
 
   const education = [
     {
-      degree: "Bachelor of Computer Science",
-      institution: "University of Technology",
-      year: "2019",
-      description: "Specialized in Software Engineering and Web Development"
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Chitkara Institute of Engineering & Technology",
+      year: "2024",
+      description: "Focused on full-stack development, project building, and system design."
+    },
+    {
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Sri Guru Gobind Singh College, Chandigarh",
+      year: "2021",
+      description: "Built strong foundations in programming and software development."
     }
   ];
 
@@ -110,18 +116,13 @@ export default function About() {
                 <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Who I Am</h3>
                 <div className="space-y-4 text-gray-300 text-sm sm:text-base">
                   <p>
-                    I'm a passionate Full Stack Developer with over 4 years of experience in creating 
-                    modern web applications. I specialize in React, Node.js, and Zoho CRM solutions, 
-                    bringing ideas to life through clean code and intuitive user experiences.
+                    I'm a motivated and detail-oriented Full Stack Developer with strong hands-on experience through academic and personal projects. I specialize in building responsive web applications using the MERN stack, with a focus on clean code and performance optimization.
                   </p>
                   <p>
-                    My journey in web development started with a curiosity to build things that make 
-                    a difference. Today, I work with cutting-edge technologies to deliver scalable 
-                    solutions that drive business growth and user satisfaction.
+                    My journey into development started during my BCA and MCA, where I built projects like a real-time garbage collection app and a fully functional e-commerce platform. These projects helped me deepen my understanding of both frontend and backend technologies.
                   </p>
                   <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to 
-                    open-source projects, or sharing knowledge with the developer community.
+                    I'm constantly learning and exploring new technologies. I enjoy contributing to open-source, collaborating with peers, and transforming real-world problems into effective digital solutions.
                   </p>
                 </div>
               </motion.div>

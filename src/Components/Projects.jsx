@@ -12,58 +12,28 @@ export default function Projects() {
   const projects = [
     {
       title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+      description: "A comprehensive MERN stack solution with user authentication, product catalog, shopping cart, payment processing, and admin dashboard.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
+      technologies: ["React", "Node.js", "MongoDB", "Razorpay", "Redux"],
       liveUrl: "#",
       githubUrl: "#",
-      category: "Full Stack"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-      technologies: ["React", "Firebase", "Material-UI", "React DnD"],
+      title: "Job Portal Platform",
+      description: "A full-featured job portal with resume builder, job search filters, application tracking, company profiles, and real-time notifications.",
+      image: "https://images.unsplash.com/photo-1515169067865-5387ec356754?w=800&h=600&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "Socket.IO", "Redux"],
       liveUrl: "#",
       githubUrl: "#",
-      category: "Frontend"
     },
     {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-      technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
+      title: "Cloud IDE with Docker",
+      description: "A cloud-based development environment using Docker containers for isolated code execution, real-time collaboration, syntax highlighting, and terminal access.",
+      image: "https://images.unsplash.com/photo-1590608897129-79da98d159ad?w=800&h=600&fit=crop",
+      technologies: ["Docker", "Node.js", "React", "Socket.IO", "Monaco Editor"],
       liveUrl: "#",
       githubUrl: "#",
-      category: "Frontend"
     },
-    {
-      title: "Zoho CRM Integration",
-      description: "Custom Zoho CRM solution with automated workflows, custom modules, and third-party integrations for business process optimization.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      technologies: ["Zoho CRM", "Deluge", "API Integration", "Workflows"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "CRM"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website with smooth animations, dark/light mode, and optimized performance.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-      technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Frontend"
-    },
-    {
-      title: "Restaurant Management System",
-      description: "Complete restaurant management solution with order tracking, inventory management, and customer relationship features.",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
-      technologies: ["Next.js", "PostgreSQL", "Prisma", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Full Stack"
-    }
   ];
 
   const containerVariants = {

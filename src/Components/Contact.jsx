@@ -1,4 +1,4 @@
-import emailjs from "@emailjs/browser";
+import { useForm } from "@formspree/react";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -12,22 +12,32 @@ export default function Contact() {
     threshold: 0.1,
   });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // Replace with your Formspree form ID
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID);
 
-    emailjs
-      .sendForm(import.meta.env.VITE_SERVICE_EMAIL, import.meta.env.VITE_EMAIL_TEMPLATE, form.current, {
-        publicKey: import.meta.env.VITE_PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          alert("Failed to send message. Please try again.", error.text);
-        }
-      );
-  };
+  // Show success message when form is submitted successfully
+  if (state.succeeded) {
+    return (
+      <div className="flex w-full">
+        <main className="flex-1 w-full">
+          <section className="contact-section w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16" id="contact">
+            <div className="contact-container max-w-7xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">Thank You!</h2>
+              <p className="text-lg sm:text-xl text-gray-300 mb-8">
+                Your message has been sent successfully. I'll get back to you soon!
+              </p>
+              <button 
+                onClick={() => window.location.reload()} 
+                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Send Another Message
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+    );
+  }
 
   const contactInfo = [
     {
@@ -119,7 +129,7 @@ export default function Contact() {
               <motion.form
                 className="contact-form bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-6 sm:p-8 rounded-2xl border border-gray-800 shadow-xl"
                 ref={form}
-                onSubmit={sendEmail}
+                onSubmit={handleSubmit}
                 initial={{ opacity: 0, x: 50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -136,7 +146,7 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
-                    name="from_name"
+                    name="name"
                     placeholder="Your full name"
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 transition-colors duration-300"
@@ -153,7 +163,7 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
-                    name="reply_to"
+                    name="email"
                     placeholder="your.email@example.com"
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 transition-colors duration-300"
@@ -196,16 +206,25 @@ export default function Contact() {
 
                 <motion.button
                   type="submit"
-                  className="submit-btn w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                  disabled={state.submitting}
+                  className="submit-btn w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 1.0 }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: state.submitting ? 1 : 1.02 }}
+                  whileTap={{ scale: state.submitting ? 1 : 0.98 }}
                 >
                   <Send size={20} />
-                  <span>Send Message</span>
+                  <span>{state.submitting ? "Sending..." : "Send Message"}</span>
                 </motion.button>
+                
+                {state.errors && state.errors.length > 0 && (
+                  <div className="mt-4 p-4 bg-red-900/50 border border-red-500 rounded-lg">
+                    <p className="text-red-300 text-sm">
+                      There was an error sending your message. Please try again.
+                    </p>
+                  </div>
+                )}
               </motion.form>
             </div>
           </div>

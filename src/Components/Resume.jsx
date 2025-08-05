@@ -4,47 +4,45 @@ import LiquidGlassBackground from "./LiquidGlassBackground";
 
 export default function Resume() {
   const skills = [
+    { name: 'JavaScript (ES6+)', level: 95 },
     { name: 'React.js', level: 90 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'Node.js', level: 80 },
-    { name: 'Python', level: 75 },
-    { name: 'MongoDB', level: 70 },
-    { name: 'PostgreSQL', level: 65 },
+    { name: 'Node.js', level: 88 },
+    { name: 'Express.js', level: 85 },
+    { name: 'MongoDB', level: 82 },
+    { name: 'TypeScript', level: 80 },
+    { name: 'Redux', level: 78 },
+    { name: 'TailwindCSS', level: 85 },
+    { name: 'Java', level: 75 },
+    { name: 'MySQL', level: 70 },
   ];
 
-  const experience = [
+  const projects = [
     {
-      title: 'Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Developed and maintained web applications using React, Node.js, and MongoDB. Led a team of 3 developers and improved application performance by 40%.'
+      title: 'E-commerce Platform',
+      tech: 'MERN STACK',
+      link: 'https://newecommercewebsite.onrender.com/',
+      description: 'Created a responsive e-commerce platform using the MERN stack with real-time admin support and image uploads. Designed a Product API for inventory management and personalized recommendations, increasing engagement by 25%. Implemented secure role-based access controls with JWT, along with real-time Add to Cart and optimized checkout features. Designed and implemented a hybrid architecture combining monolithic and serverless functions to enhance scalability, reduce backend workload, and optimize resource utilization.'
     },
     {
-      title: 'Frontend Developer',
-      company: 'Digital Creations',
-      period: '2021 - 2022',
-      description: 'Built responsive user interfaces and implemented modern design patterns. Collaborated with UX designers to create intuitive user experiences.'
-    },
-    {
-      title: 'Junior Developer',
-      company: 'StartUp Ventures',
-      period: '2020 - 2021',
-      description: 'Assisted in developing web applications and learned modern development practices. Contributed to bug fixes and feature implementations.'
+      title: 'Garbage Collector App',
+      tech: 'Android Studio',
+      link: 'github.com/Mo-hit99/Garbage-Collector-App.git',
+      description: 'Developed a real-time garbage collection app using Java, Firebase, and Android Studio. Integrated real-time tracking for garbage trucks, enhancing transparency and customer satisfaction by 20%. Improved app performance by 40% through advanced memory management techniques. Reduced app loading times by 15%, optimizing user experience.'
     }
   ];
 
   const education = [
     {
-      degree: 'Bachelor of Computer Science',
-      institution: 'University of Technology',
-      period: '2016 - 2020',
-      description: 'Graduated with honors. Specialized in Software Engineering and Web Development.'
+      degree: 'Master of Computer Applications (MCA)',
+      institution: 'Chitkara Institute of Engineering & Technology',
+      period: 'Rajpura',
+      description: 'CGPA: 7.2'
     },
     {
-      degree: 'Web Development Certification',
-      institution: 'Coding Bootcamp',
-      period: '2020',
-      description: 'Intensive 6-month program covering full-stack development technologies.'
+      degree: 'Bachelor of Computer Applications (BCA)',
+      institution: 'Sri Guru Gobind Singh College',
+      period: 'Chandigarh',
+      description: 'CGPA: 7.4'
     }
   ];
 
@@ -92,21 +90,25 @@ export default function Resume() {
                 </div>
               </div>
 
-              {/* Experience & Education */}
+              {/* Projects & Education */}
               <div className="lg:col-span-2 space-y-6 sm:space-y-8">
-                {/* Experience */}
+                {/* Projects */}
                 <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-4 sm:p-6 border border-gray-800 shadow-xl">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center">
                     <BriefcaseIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-pink-400" />
-                    Experience
+                    Projects
                   </h2>
                   <div className="space-y-4 sm:space-y-6">
-                    {experience.map((exp, index) => (
+                    {projects.map((project, index) => (
                       <div key={index} className="border-l-2 border-pink-500 pl-4 sm:pl-6">
-                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">{exp.title}</h3>
-                        <p className="text-pink-400 font-medium text-sm sm:text-base mb-1">{exp.company}</p>
-                        <p className="text-gray-400 text-xs sm:text-sm mb-2">{exp.period}</p>
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{exp.description}</p>
+                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">{project.title}</h3>
+                        <p className="text-pink-400 font-medium text-sm sm:text-base mb-1">{project.tech}</p>
+                        <a href={project.link.startsWith('http') ? project.link : `https://${project.link}`} 
+                           target="_blank" rel="noopener noreferrer" 
+                           className="text-blue-400 hover:text-blue-300 text-xs sm:text-sm mb-2 block underline">
+                          {project.link}
+                        </a>
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{project.description}</p>
                       </div>
                     ))}
                   </div>
@@ -137,19 +139,20 @@ export default function Resume() {
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Additional Information</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white mb-2 sm:mb-3">Languages</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-2 sm:mb-3">Contact</h3>
                   <ul className="text-gray-300 space-y-1 text-sm sm:text-base">
-                    <li>• English (Native)</li>
-                    <li>• Spanish (Intermediate)</li>
-                    <li>• French (Basic)</li>
+                    <li>• Zirakpur, Punjab</li>
+                    <li>• +917986104250</li>
+                    <li>• mk3705200@gmail.com</li>
+                    <li>• linkedin.com/in/mohitkohli007</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-semibold text-white mb-2 sm:mb-3">Certifications</h3>
                   <ul className="text-gray-300 space-y-1 text-sm sm:text-base">
-                    <li>• AWS Certified Developer</li>
-                    <li>• Google Cloud Professional</li>
-                    <li>• React Developer Certification</li>
+                    <li>• Responsive Web Design - freeCodeCamp</li>
+                    <li>• JavaScript Algorithms and Data Structures - freeCodeCamp</li>
+                    <li>• MERN Stack - freeCodeCamp</li>
                   </ul>
                 </div>
               </div>
