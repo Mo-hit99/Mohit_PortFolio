@@ -55,12 +55,6 @@ export default function Resume() {
             <div className="text-center mb-8 sm:mb-12">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Resume</h1>
               <p className="text-gray-300 text-base sm:text-lg">Professional experience and skills</p>
-              
-              {/* Download Button */}
-              <button className="mt-6 inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base">
-                <DocumentArrowDownIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Download PDF
-              </button>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">

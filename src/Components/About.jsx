@@ -92,14 +92,18 @@ export default function About() {
                     </div>
                     <div className="info-item flex items-center space-x-3">
                       <MapPin size={20} className="text-pink-400 flex-shrink-0" />
-                      <span className="text-gray-300">New Delhi, India</span>
+                      <span className="text-gray-300">Zirakpur, Punjab, India</span>
                     </div>
                     <div className="info-item flex items-center space-x-3">
                       <Calendar size={20} className="text-pink-400 flex-shrink-0" />
                       <span className="text-gray-300">Available for new opportunities</span>
                     </div>
                   </div>
-                  <a href="#" className="download-cv inline-flex items-center space-x-2 mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
+                  <a 
+                    href="/src/assets/Resume -mohit_MERN.pdf" 
+                    download="Mohit_MERN_Resume.pdf"
+                    className="download-cv inline-flex items-center space-x-2 mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
+                  >
                     <Download size={20} />
                     <span>Download CV</span>
                   </a>
