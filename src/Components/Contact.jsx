@@ -20,14 +20,20 @@ export default function Contact() {
     return (
       <div className="flex w-full">
         <main className="flex-1 w-full">
-          <section className="contact-section w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16" id="contact">
+          <section
+            className="contact-section w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"
+            id="contact"
+          >
             <div className="contact-container max-w-7xl mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">Thank You!</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Thank You!
+              </h2>
               <p className="text-lg sm:text-xl text-gray-300 mb-8">
-                Your message has been sent successfully. I'll get back to you soon!
+                Your message has been sent successfully. I'll get back to you
+                soon!
               </p>
-              <button 
-                onClick={() => window.location.reload()} 
+              <button
+                onClick={() => window.location.reload()}
                 className="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
               >
                 Send Another Message
@@ -44,26 +50,29 @@ export default function Contact() {
       icon: <Phone size={24} />,
       title: "Phone",
       value: "+91 7986104250",
-      link: "tel:+917986104250"
+      link: "tel:+917986104250",
     },
     {
       icon: <Mail size={24} />,
       title: "Email",
       value: "mk3705200@gmail.com",
-      link: "mailto:mk3705200@gmail.com"
+      link: "mailto:mk3705200@gmail.com",
     },
     {
       icon: <MapPin size={24} />,
       title: "Location",
-      value: "New Delhi, India",
-      link: "#"
-    }
+      value: "Zirakpur, Punjab, India",
+      link: "#",
+    },
   ];
 
   return (
     <div className="flex w-full">
       <main className="flex-1 w-full">
-        <section className="contact-section w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16" id="contact">
+        <section
+          className="contact-section w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"
+          id="contact"
+        >
           <div className="contact-container max-w-7xl mx-auto">
             <motion.div
               className="contact-header text-center mb-8 sm:mb-12"
@@ -71,13 +80,18 @@ export default function Contact() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="contact-title text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">Get In Touch</h2>
+              <h2 className="contact-title text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Get In Touch
+              </h2>
               <p className="contact-subtitle text-lg sm:text-xl text-gray-300">
                 Let's discuss your next project and bring your ideas to life
               </p>
             </motion.div>
 
-            <div className="contact-content grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" ref={ref}>
+            <div
+              className="contact-content grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
+              ref={ref}
+            >
               {/* Contact Information */}
               <motion.div
                 className="contact-info-section"
@@ -85,7 +99,9 @@ export default function Contact() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Contact Information</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
+                  Contact Information
+                </h3>
                 <div className="contact-info-grid space-y-4 mb-8">
                   {contactInfo.map((info, index) => (
                     <motion.a
@@ -99,12 +115,12 @@ export default function Contact() {
                       whileTap={{ scale: 0.98 }}
                     >
                       <div className="contact-icon w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <div className="text-white">
-                          {info.icon}
-                        </div>
+                        <div className="text-white">{info.icon}</div>
                       </div>
                       <div className="contact-details">
-                        <h4 className="text-white font-semibold text-sm sm:text-base">{info.title}</h4>
+                        <h4 className="text-white font-semibold text-sm sm:text-base">
+                          {info.title}
+                        </h4>
                         <p className="text-gray-300 text-sm">{info.value}</p>
                       </div>
                     </motion.a>
@@ -117,10 +133,12 @@ export default function Contact() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">Ready to Start?</h4>
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                    Ready to Start?
+                  </h4>
                   <p className="text-gray-300 text-sm sm:text-base">
-                    I'm always open to discussing new projects, creative ideas, or 
-                    opportunities to be part of your visions.
+                    I'm always open to discussing new projects, creative ideas,
+                    or opportunities to be part of your visions.
                   </p>
                 </motion.div>
               </motion.div>
@@ -134,15 +152,22 @@ export default function Contact() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Send Message</h3>
-                
+                <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
+                  Send Message
+                </h3>
+
                 <motion.div
                   className="form-group mb-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  <label htmlFor="name" className="block text-white font-semibold mb-2 text-sm sm:text-base">Name</label>
+                  <label
+                    htmlFor="name"
+                    className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                  >
+                    Name
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -159,7 +184,12 @@ export default function Contact() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                  <label htmlFor="email" className="block text-white font-semibold mb-2 text-sm sm:text-base">Email</label>
+                  <label
+                    htmlFor="email"
+                    className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                  >
+                    Email
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -176,7 +206,12 @@ export default function Contact() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                  <label htmlFor="subject" className="block text-white font-semibold mb-2 text-sm sm:text-base">Subject</label>
+                  <label
+                    htmlFor="subject"
+                    className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                  >
+                    Subject
+                  </label>
                   <input
                     type="text"
                     id="subject"
@@ -193,7 +228,12 @@ export default function Contact() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.9 }}
                 >
-                  <label htmlFor="message" className="block text-white font-semibold mb-2 text-sm sm:text-base">Message</label>
+                  <label
+                    htmlFor="message"
+                    className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                  >
+                    Message
+                  </label>
                   <textarea
                     id="message"
                     name="message"
@@ -215,9 +255,11 @@ export default function Contact() {
                   whileTap={{ scale: state.submitting ? 1 : 0.98 }}
                 >
                   <Send size={20} />
-                  <span>{state.submitting ? "Sending..." : "Send Message"}</span>
+                  <span>
+                    {state.submitting ? "Sending..." : "Send Message"}
+                  </span>
                 </motion.button>
-                
+
                 {state.errors && state.errors.length > 0 && (
                   <div className="mt-4 p-4 bg-red-900/50 border border-red-500 rounded-lg">
                     <p className="text-red-300 text-sm">

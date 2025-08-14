@@ -15,16 +15,16 @@ export default function Projects() {
       description: "A comprehensive MERN stack solution with user authentication, product catalog, shopping cart, payment processing, and admin dashboard.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
       technologies: ["React", "Node.js", "MongoDB", "Razorpay", "Redux"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://newecommercewebsite.onrender.com/",
+      githubUrl: "https://github.com/Mo-hit99/NewEcommerceWebsite",
     },
     {
       title: "Job Portal Platform",
       description: "A full-featured job portal with resume builder, job search filters, application tracking, company profiles, and real-time notifications.",
       image: "https://images.unsplash.com/photo-1515169067865-5387ec356754?w=800&h=600&fit=crop",
       technologies: ["React", "Node.js", "MongoDB", "Socket.IO", "Redux"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://job-portal-five-kappa.vercel.app/",
+      githubUrl: "https://github.com/Mo-hit99/jobPortal",
     },
     {
       title: "Cloud IDE with Docker",
@@ -32,7 +32,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1590608897129-79da98d159ad?w=800&h=600&fit=crop",
       technologies: ["Docker", "Node.js", "React", "Socket.IO", "Monaco Editor"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Mo-hit99/CloudIDE",
     },
   ];
 
