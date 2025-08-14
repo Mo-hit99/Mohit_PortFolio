@@ -100,7 +100,7 @@ export default function About() {
                     </div>
                   </div>
                   <a 
-                    href="/src/assets/Resume -mohit_MERN.pdf" 
+                    href="/Resume -mohit_MERN.pdf" 
                     download="Mohit_MERN_Resume.pdf"
                     className="download-cv inline-flex items-center space-x-2 mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
                   >
