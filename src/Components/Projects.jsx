@@ -31,7 +31,7 @@ export default function Projects() {
       description: "A cloud-based development environment using Docker containers for isolated code execution, real-time collaboration, syntax highlighting, and terminal access.",
       image: "https://images.unsplash.com/photo-1590608897129-79da98d159ad?w=800&h=600&fit=crop",
       technologies: ["Docker", "Node.js", "React", "Socket.IO", "Monaco Editor"],
-      liveUrl: "#",
+      liveUrl: "https://cloud-ide-frontend.onrender.com",
       githubUrl: "https://github.com/Mo-hit99/CloudIDE",
     },
   ];
