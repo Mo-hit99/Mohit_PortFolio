@@ -139,7 +139,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center text-gray-400 hover:text-white transition-colors duration-300">
                   <MapPinIcon className="w-5 h-5 mr-3 text-indigo-400 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">New Delhi, India</span>
+                  <span className="text-sm sm:text-base">Zirakpur, Punjab, India</span>
                 </div>
               </div>
             </div>
