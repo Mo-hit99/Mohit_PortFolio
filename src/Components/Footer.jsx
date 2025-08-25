@@ -7,22 +7,15 @@ import {
 import { 
   FaGithub, 
   FaLinkedin, 
-  FaTwitter, 
-  FaInstagram,
-  FaDribbble,
-  FaBehance
 } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { name: 'GitHub', icon: <FaGithub className="w-5 h-5" />, href: 'https://github.com', color: 'hover:text-gray-400' },
-    { name: 'LinkedIn', icon: <FaLinkedin className="w-5 h-5" />, href: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { name: 'Twitter', icon: <FaTwitter className="w-5 h-5" />, href: 'https://twitter.com', color: 'hover:text-sky-400' },
-    { name: 'Instagram', icon: <FaInstagram className="w-5 h-5" />, href: 'https://instagram.com', color: 'hover:text-pink-400' },
-    { name: 'Dribbble', icon: <FaDribbble className="w-5 h-5" />, href: 'https://dribbble.com', color: 'hover:text-red-400' },
-    { name: 'Behance', icon: <FaBehance className="w-5 h-5" />, href: 'https://behance.net', color: 'hover:text-blue-600' },
+    { name: 'GitHub', icon: <FaGithub className="w-5 h-5" />, href: 'https://github.com/Mo-hit99', color: 'hover:text-gray-400' },
+    { name: 'LinkedIn', icon: <FaLinkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/mohitkohli007/', color: 'hover:text-blue-400' },
+ 
   ];
 
   const quickLinks = [

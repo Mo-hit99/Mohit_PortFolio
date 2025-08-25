@@ -120,44 +120,26 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <div className="social-icons flex justify-center gap-4 sm:gap-6">
+          <div className="social-icons flex justify-center gap-4 sm:gap-6 cursor-pointer">
             <motion.a 
-              href="https://github.com" 
+              href="https://github.com/Mo-hit99" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="social-icon p-2 sm:p-3"
+              className="social-icon p-2 sm:p-3 cursor-pointer"
             >
               <Github className="w-5 h-5 sm:w-6 sm:h-6" />
             </motion.a>
             <motion.a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/mohitkohli007/" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="social-icon p-2 sm:p-3"
+              className="social-icon p-2 sm:p-3 cursor-pointer"
             >
               <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-            </motion.a>
-            <motion.a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              className="social-icon p-2 sm:p-3"
-            >
-              <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />
-            </motion.a>
-            <motion.a 
-              href="mailto:mk3705200@gmail.com"
-              whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              className="social-icon p-2 sm:p-3"
-            >
-              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
             </motion.a>
           </div>
         </motion.div>
