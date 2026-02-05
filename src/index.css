@@ -20,3 +20,35 @@
 .animate-infinite-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Responsive infinite scroll speeds */
+@media (max-width: 768px) {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 25s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 20s linear infinite;
+  }
+}
+
+@media (max-width: 360px) {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 18s linear infinite;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 13px;
+  }
+}

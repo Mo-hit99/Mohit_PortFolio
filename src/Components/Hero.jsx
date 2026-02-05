@@ -33,8 +33,8 @@ export default function Hero() {
           <div className="glass-shape glass-shape-3"></div>
         </div>
 
-        {/* Lottie Animation */}
-        <div className="hidden md:block">
+        {/* Lottie Animation - Hidden on mobile and small tablets */}
+        <div className="hidden lg:block">
           <LottieAnimation />
         </div>
 
@@ -49,12 +49,12 @@ export default function Hero() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-sm sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
+              className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold block mb-2 sm:mb-0 sm:inline"
             >
               👋 Hello Everybody! I'm
             </motion.span>
             <motion.span
-              className="highlight-name  text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
+              className="highlight-name text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold block sm:inline"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -65,7 +65,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.span 
-          className="first-text block text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+          className="first-text block text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mt-4 sm:mt-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -74,11 +74,11 @@ export default function Hero() {
         </motion.span>
 
         <motion.div 
-          className="sec-texts flex justify-center items-center mb-4 sm:mb-6 md:mb-8"
+          className="sec-texts flex justify-center items-center mb-6 sm:mb-8 md:mb-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          style={{ height: "60px" }}
+          style={{ height: "50px", minHeight: "50px" }}
         >
           <AnimatePresence mode="wait">
             <motion.span
@@ -96,8 +96,9 @@ export default function Hero() {
               style={{
                 color: "#e65983",
                 fontWeight: 600,
-                fontSize: "clamp(1rem, 4vw, 2rem)",
-                textAlign: "center"
+                fontSize: "clamp(1rem, 5vw, 2.5rem)",
+                textAlign: "center",
+                lineHeight: "1.2"
               }}
             >
               {texts[currentTextIndex]}
@@ -106,7 +107,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div 
-          className="container-btn flex justify-center"
+          className="container-btn flex justify-center mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
@@ -120,7 +121,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <div className="social-icons flex justify-center gap-4 sm:gap-6 cursor-pointer">
+          <div className="social-icons flex justify-center gap-3 sm:gap-4 md:gap-6 cursor-pointer">
             <motion.a 
               href="https://github.com/Mo-hit99" 
               target="_blank" 
@@ -129,7 +130,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="social-icon p-2 sm:p-3 cursor-pointer"
             >
-              <Github className="w-5 h-5 sm:w-6 sm:h-6" />
+              <Github className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             </motion.a>
             <motion.a 
               href="https://www.linkedin.com/in/mohitkohli007/" 
@@ -139,7 +140,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="social-icon p-2 sm:p-3 cursor-pointer"
             >
-              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+              <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             </motion.a>
           </div>
         </motion.div>

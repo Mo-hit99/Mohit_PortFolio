@@ -151,40 +151,40 @@ export default function Home() {
         </section>
 
         {/* Achievements Section */}
-        <section className="py-20 bg-black" id="achievements">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-black" id="achievements">
+          <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
                 <span className="text-pink-500"></span>Achievements
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-2 sm:px-4">
                 Numbers that speak for my dedication and expertise
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
               {achievements.map((achievement, index) => (
                 <div key={index} className="relative group">
                   {/* Liquid Glass Card */}
-                  <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10">
+                  <div className="relative bg-white/5 backdrop-blur-lg rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 text-center border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10">
                     {/* Glass shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     {/* Floating animation */}
                     <div className="relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500">
-                      <div className="text-5xl mb-4 filter drop-shadow-lg">{achievement.icon}</div>
-                      <div className="text-4xl font-bold text-pink-500 mb-2 filter drop-shadow-lg">
+                      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-1 sm:mb-2 md:mb-3 lg:mb-4 filter drop-shadow-lg">{achievement.icon}</div>
+                      <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-pink-500 mb-1 sm:mb-1.5 md:mb-2 filter drop-shadow-lg">
                         {index === 0 ? counters.bugsFixed :
                          index === 1 ? counters.projectsCompleted :
                          index === 2 ? counters.clientsSatisfied :
                          counters.codeLines.toLocaleString()}{achievement.suffix}
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2 filter drop-shadow-lg">{achievement.title}</h3>
-                      <p className="text-gray-300 text-sm filter drop-shadow-lg">{achievement.description}</p>
+                      <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white mb-1 sm:mb-1.5 md:mb-2 filter drop-shadow-lg">{achievement.title}</h3>
+                      <p className="text-gray-300 text-xs sm:text-sm filter drop-shadow-lg leading-tight">{achievement.description}</p>
                     </div>
                     
                     {/* Liquid ripple effect */}
-                    <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden">
                       <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
                     </div>
                   </div>
@@ -195,33 +195,33 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section className="py-20 bg-black" id="skills">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-black" id="skills">
+          <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
                 <span className="text-pink-500"></span>Skills
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-2 sm:px-4">
                 Technologies and tools I use to build amazing software
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
               {Object.entries(skills).map(([category, items]) => (
                 <div key={category} className="relative group">
                   {/* Liquid Glass Card */}
-                  <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10">
+                  <div className="relative bg-white/5 backdrop-blur-lg rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10">
                     {/* Glass shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     {/* Content */}
                     <div className="relative z-10 transform group-hover:-translate-y-1 transition-transform duration-500">
-                      <h3 className="text-lg font-semibold text-white mb-4 capitalize border-b border-pink-500 pb-2 filter drop-shadow-lg">
+                      <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2 sm:mb-3 md:mb-4 capitalize border-b border-pink-500 pb-1 sm:pb-1.5 md:pb-2 filter drop-shadow-lg">
                         {category}
                       </h3>
-                      <div className="space-y-2">
+                      <div className="space-y-1 sm:space-y-1.5 md:space-y-2">
                         {items.map((skill, idx) => (
-                          <div key={idx} className="text-gray-300 text-sm py-1 hover:text-pink-400 transition-colors filter drop-shadow-lg">
+                          <div key={idx} className="text-gray-300 text-xs sm:text-sm py-0.5 sm:py-1 hover:text-pink-400 transition-colors filter drop-shadow-lg leading-tight">
                             {skill}
                           </div>
                         ))}
@@ -229,7 +229,7 @@ export default function Home() {
                     </div>
                     
                     {/* Liquid ripple effect */}
-                    <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden">
                       <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
                     </div>
                   </div>
@@ -240,13 +240,13 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-black" id="testimonials">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-black" id="testimonials">
+          <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
                 <span className="text-pink-500"></span>Testimonials
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-2 sm:px-4">
                 What clients say about my work
               </p>
             </div>
@@ -254,38 +254,38 @@ export default function Home() {
             <div className="relative max-w-7xl mx-auto">
               <div className="overflow-hidden">
                 {/* Infinite scrolling animation */}
-                <div className="flex gap-6 animate-infinite-scroll">
+                <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 animate-infinite-scroll">
                   {/* First set of testimonials */}
                   {testimonials.map((testimonial, index) => (
-                    <div key={index} className="w-80 flex-shrink-0 px-3">
+                    <div key={index} className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 px-1 sm:px-1.5 md:px-2 lg:px-3">
                       <div className="relative group h-full">
                         {/* Liquid Glass Card */}
-                        <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-6 text-center border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 h-full flex flex-col">
+                        <div className="relative bg-white/5 backdrop-blur-lg rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 text-center border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 h-full flex flex-col">
                           {/* Glass shine effect */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                           
                           {/* Content */}
                           <div className="relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500 flex flex-col h-full">
                             {/* Stars */}
-                            <div className="flex justify-center mb-4">
+                            <div className="flex justify-center mb-2 sm:mb-3 md:mb-4">
                               {renderStars(testimonial.rating)}
                             </div>
                             
                             {/* Message */}
-                            <p className="text-gray-300 text-sm mb-6 italic filter drop-shadow-lg flex-grow">
+                            <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 md:mb-5 lg:mb-6 italic filter drop-shadow-lg flex-grow leading-tight">
                               &ldquo;{testimonial.message}&rdquo;
                             </p>
                             
                             {/* Client Info */}
-                            <div className="space-y-1 mt-auto">
-                              <h4 className="text-white font-semibold text-lg filter drop-shadow-lg">{testimonial.name}</h4>
-                              <p className="text-pink-400 text-sm filter drop-shadow-lg">{testimonial.role}</p>
+                            <div className="space-y-0.5 sm:space-y-1 mt-auto">
+                              <h4 className="text-white font-semibold text-sm sm:text-base md:text-lg filter drop-shadow-lg">{testimonial.name}</h4>
+                              <p className="text-pink-400 text-xs sm:text-sm filter drop-shadow-lg">{testimonial.role}</p>
                               <p className="text-gray-400 text-xs filter drop-shadow-lg">{testimonial.location}</p>
                             </div>
                           </div>
                           
                           {/* Liquid ripple effect */}
-                          <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                          <div className="absolute inset-0 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden">
                             <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
                           </div>
                         </div>
@@ -295,35 +295,35 @@ export default function Home() {
                   
                   {/* Duplicate set for seamless loop */}
                   {testimonials.map((testimonial, index) => (
-                    <div key={`duplicate-${index}`} className="w-80 flex-shrink-0 px-3">
+                    <div key={`duplicate-${index}`} className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 px-1 sm:px-1.5 md:px-2 lg:px-3">
                       <div className="relative group h-full">
                         {/* Liquid Glass Card */}
-                        <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-6 text-center border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 h-full flex flex-col">
+                        <div className="relative bg-white/5 backdrop-blur-lg rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 text-center border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 h-full flex flex-col">
                           {/* Glass shine effect */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                           
                           {/* Content */}
                           <div className="relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500 flex flex-col h-full">
                             {/* Stars */}
-                            <div className="flex justify-center mb-4">
+                            <div className="flex justify-center mb-2 sm:mb-3 md:mb-4">
                               {renderStars(testimonial.rating)}
                             </div>
                             
                             {/* Message */}
-                            <p className="text-gray-300 text-sm mb-6 italic filter drop-shadow-lg flex-grow">
+                            <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 md:mb-5 lg:mb-6 italic filter drop-shadow-lg flex-grow leading-tight">
                               &ldquo;{testimonial.message}&rdquo;
                             </p>
                             
                             {/* Client Info */}
-                            <div className="space-y-1 mt-auto">
-                              <h4 className="text-white font-semibold text-lg filter drop-shadow-lg">{testimonial.name}</h4>
-                              <p className="text-pink-400 text-sm filter drop-shadow-lg">{testimonial.role}</p>
+                            <div className="space-y-0.5 sm:space-y-1 mt-auto">
+                              <h4 className="text-white font-semibold text-sm sm:text-base md:text-lg filter drop-shadow-lg">{testimonial.name}</h4>
+                              <p className="text-pink-400 text-xs sm:text-sm filter drop-shadow-lg">{testimonial.role}</p>
                               <p className="text-gray-400 text-xs filter drop-shadow-lg">{testimonial.location}</p>
                             </div>
                           </div>
                           
                           {/* Liquid ripple effect */}
-                          <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                          <div className="absolute inset-0 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden">
                             <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
                           </div>
                         </div>
