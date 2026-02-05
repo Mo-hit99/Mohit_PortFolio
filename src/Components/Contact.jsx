@@ -134,11 +134,10 @@ export default function Contact() {
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
                   <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
-                    Ready to Start?
+                    Let's Work Together
                   </h4>
                   <p className="text-gray-300 text-sm sm:text-base">
-                    I'm always open to discussing new projects, creative ideas,
-                    or opportunities to be part of your visions.
+                    I'm interested in freelance opportunities. However, if you have other requests or questions, don't hesitate to contact me.
                   </p>
                 </motion.div>
               </motion.div>

@@ -9,18 +9,37 @@ export default function About() {
     threshold: 0.1,
   });
 
-  const skills = [
-    { name: "React", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "Node.js", level: 80 },
-    { name: "TypeScript", level: 75 },
-    { name: "Next.js", level: 85 },
-    { name: "MongoDB", level: 70 },
-    { name: "PostgreSQL", level: 65 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "Zoho CRM", level: 85 },
-    { name: "Git", level: 80 }
-  ];
+  const skillCategories = {
+    languages: [
+      { name: "TypeScript", level: 85 },
+      { name: "JavaScript", level: 90 },
+      { name: "Python", level: 75 },
+      { name: "Java", level: 70 }
+    ],
+    databases: [
+      { name: "MongoDB", level: 80 },
+      { name: "PostgreSQL", level: 75 },
+      { name: "MySQL", level: 70 },
+      { name: "Redis", level: 65 }
+    ],
+    tools: [
+      { name: "VSCode", level: 95 },
+      { name: "Git", level: 85 },
+      { name: "Docker", level: 70 },
+      { name: "AWS", level: 65 }
+    ],
+    frameworks: [
+      { name: "React", level: 90 },
+      { name: "Node.js", level: 85 },
+      { name: "Express.js", level: 80 },
+      { name: "Next.js", level: 85 }
+    ],
+    other: [
+      { name: "REST APIs", level: 85 },
+      { name: "Microservices", level: 70 },
+      { name: "CI/CD", level: 65 }
+    ]
+  };
 
   const experiences = [
     {
@@ -140,30 +159,38 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-white">Technical Skills</h3>
-              <div className="skills-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-                {skills.map((skill, index) => (
-                  <motion.div
-                    key={index}
-                    className="skill-item bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-4 sm:p-6 rounded-xl border border-gray-800"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  >
-                    <div className="skill-header flex justify-between items-center mb-3">
-                      <span className="skill-name text-white font-semibold text-sm sm:text-base">{skill.name}</span>
-                      <span className="skill-percentage text-pink-400 font-bold text-sm">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar bg-gray-700 rounded-full h-2">
+              
+              {Object.entries(skillCategories).map(([category, skills], categoryIndex) => (
+                <div key={category} className="mb-8 sm:mb-12">
+                  <h4 className="text-xl sm:text-2xl font-semibold mb-6 text-pink-400 capitalize">
+                    {category === 'other' ? 'Other Technologies' : category}
+                  </h4>
+                  <div className="skills-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                    {skills.map((skill, index) => (
                       <motion.div
-                        className="skill-progress bg-gradient-to-r from-pink-500 to-purple-600 h-2 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={inView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1, delay: 1 + index * 0.1 }}
-                      ></motion.div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+                        key={index}
+                        className="skill-item bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-4 sm:p-6 rounded-xl border border-gray-800"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={inView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.5, delay: 0.8 + categoryIndex * 0.2 + index * 0.1 }}
+                      >
+                        <div className="skill-header flex justify-between items-center mb-3">
+                          <span className="skill-name text-white font-semibold text-sm sm:text-base">{skill.name}</span>
+                          <span className="skill-percentage text-pink-400 font-bold text-sm">{skill.level}%</span>
+                        </div>
+                        <div className="skill-bar bg-gray-700 rounded-full h-2">
+                          <motion.div
+                            className="skill-progress bg-gradient-to-r from-pink-500 to-purple-600 h-2 rounded-full"
+                            initial={{ width: 0 }}
+                            animate={inView ? { width: `${skill.level}%` } : {}}
+                            transition={{ duration: 1, delay: 1 + categoryIndex * 0.2 + index * 0.1 }}
+                          ></motion.div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </motion.div>
 
             {/* Experience */}

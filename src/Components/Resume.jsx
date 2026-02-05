@@ -3,18 +3,37 @@ import { DocumentArrowDownIcon, AcademicCapIcon, BriefcaseIcon, StarIcon } from 
 import LiquidGlassBackground from "./LiquidGlassBackground";
 
 export default function Resume() {
-  const skills = [
-    { name: 'JavaScript (ES6+)', level: 95 },
-    { name: 'React.js', level: 90 },
-    { name: 'Node.js', level: 88 },
-    { name: 'Express.js', level: 85 },
-    { name: 'MongoDB', level: 82 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'Redux', level: 78 },
-    { name: 'TailwindCSS', level: 85 },
-    { name: 'Java', level: 75 },
-    { name: 'MySQL', level: 70 },
-  ];
+  const skillCategories = {
+    languages: [
+      { name: 'TypeScript', level: 85 },
+      { name: 'JavaScript (ES6+)', level: 95 },
+      { name: 'Python', level: 75 },
+      { name: 'Java', level: 70 }
+    ],
+    databases: [
+      { name: 'MongoDB', level: 82 },
+      { name: 'PostgreSQL', level: 75 },
+      { name: 'MySQL', level: 70 },
+      { name: 'Redis', level: 65 }
+    ],
+    tools: [
+      { name: 'VSCode', level: 95 },
+      { name: 'Git', level: 85 },
+      { name: 'Docker', level: 70 },
+      { name: 'AWS', level: 65 }
+    ],
+    frameworks: [
+      { name: 'React.js', level: 90 },
+      { name: 'Node.js', level: 88 },
+      { name: 'Express.js', level: 85 },
+      { name: 'Next.js', level: 85 }
+    ],
+    other: [
+      { name: 'REST APIs', level: 85 },
+      { name: 'Microservices', level: 70 },
+      { name: 'CI/CD', level: 65 }
+    ]
+  };
 
   const projects = [
     {
@@ -65,22 +84,30 @@ export default function Resume() {
                     <StarIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-pink-400" />
                     Skills
                   </h2>
-                  <div className="space-y-3 sm:space-y-4">
-                    {skills.map((skill, index) => (
-                      <div key={index}>
-                        <div className="flex justify-between text-xs sm:text-sm text-gray-300 mb-1">
-                          <span>{skill.name}</span>
-                          <span>{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-gray-700 rounded-full h-2">
-                          <div 
-                            className="bg-gradient-to-r from-pink-500 to-purple-600 h-2 rounded-full transition-all duration-1000"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
+                  
+                  {Object.entries(skillCategories).map(([category, skills]) => (
+                    <div key={category} className="mb-6">
+                      <h3 className="text-sm font-semibold text-pink-400 mb-3 uppercase tracking-wide">
+                        {category === 'other' ? 'Other Technologies' : category}
+                      </h3>
+                      <div className="space-y-3">
+                        {skills.map((skill, index) => (
+                          <div key={index}>
+                            <div className="flex justify-between text-xs sm:text-sm text-gray-300 mb-1">
+                              <span>{skill.name}</span>
+                              <span>{skill.level}%</span>
+                            </div>
+                            <div className="w-full bg-gray-700 rounded-full h-2">
+                              <div 
+                                className="bg-gradient-to-r from-pink-500 to-purple-600 h-2 rounded-full transition-all duration-1000"
+                                style={{ width: `${skill.level}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 

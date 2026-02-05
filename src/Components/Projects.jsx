@@ -34,6 +34,14 @@ export default function Projects() {
       liveUrl: "https://cloud-ide-frontend.onrender.com",
       githubUrl: "https://github.com/Mo-hit99/CloudIDE",
     },
+    {
+      title: "MarketPlace Platform",
+      description: "A modern marketplace platform built with FastAPI backend and React TypeScript frontend, featuring PostgreSQL database integration for robust data management and seamless user experience.",
+      image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&h=600&fit=crop",
+      technologies: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Python"],
+      liveUrl: "https://market-place-for-website.vercel.app",
+      githubUrl: "https://github.com/Mo-hit99/MarketPlace_for_Website",
+    },
   ];
 
   const containerVariants = {
